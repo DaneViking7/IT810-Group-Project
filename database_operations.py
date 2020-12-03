@@ -25,7 +25,7 @@ class DB_Parser(object):
         self.user='root'
         self.host='localhost'
         self.table_name='MESSAGES'
-        self.create_messages_table="CREATE TABLE "+str(self.table_name)+" (DISCUSSION_ID INT, TITLE VARCHAR(512), TIME DATETIME, MESSAGE TEXT, URL TEXT);"
+        self.create_messages_table="CREATE TABLE "+str(self.table_name)+" (DISCUSSION_ID INT, TITLE TEXT, TIME TEXT, MESSAGE TEXT, URL TEXT);"
         self.add_message="INSERT INTO MESSAGES (DISCUSSION_ID, TITLE, TIME, MESSAGE, URL) VALUES (%s,%s,%s,%s,%s)"
         self.creation_database_string="CREATE DATABASE "+str(self.database_name)+";"
         try:
